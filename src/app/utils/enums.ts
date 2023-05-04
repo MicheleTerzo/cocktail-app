@@ -1,1 +1,91 @@
-export const COCKTAIL_BASE_URL = 'www.thecocktaildb.com/api/json/v1/1/search.php'
+export enum COCKTAIL_CATEGORY {
+  COCKTAIL = "Cocktail",
+  SHOT = "Shot",
+  ORDINARY = "Ordinary Drink",
+  OTHER = "Other / Unknown",
+  PARTY = "Punch / Party Drink",
+  COFFEE_TEA = "Coffee / Tea",
+  BEER = "Beer",
+  SHAKE = "Shake",
+  SOFT = "Soft Drink",
+  HOMEMADE = "Homemade Liqueur",
+  COCOA = "Cocoa"
+}
+
+export enum COCKTAIL_TAGS {
+  ALCOHOLIC = "Alcoholic",
+  HOLIDAY = "Holiday",
+  IBA = "IBA",
+  CLASSIC = "Classic",
+  DAIRY = "Dairy",
+  NEW_ERA = "NewEra",
+  CONTEMPORARY_CLASSIC = "ContemporaryClassic",
+  SWEET = "Sweet",
+  DATE_NIGHT = "DateNight",
+  USA = "USA",
+  BEACH = "Beach",
+  CHRISTMAS = "Christmas",
+  DRUNK = "Drunk",
+  DINNER_PARTY = "DinnerParty",
+  STRONG_FLAVOR = "StrongFlavor",
+  BRAZILIAN = "Brazilian",
+  COLD = "Cold",
+  FROZEN = "Frozen",
+  SUMMER = "Summer",
+  SOUR = "Sour",
+  CITRUS = "Citrus",
+  SIMPLE = "simple",
+  HALLOWEEN = "Halloween",
+  CLEAR = "Clear",
+  WINTER = "Winter",
+  GREEN = "Green",
+  SHARP = " Sharp",
+  STRONG = "Strong",
+  ASIA = "Asia",
+  BRUNCH = "Brunch",
+  VEGETARIAN = "Vegetarian",
+  LAZY = "Lazy",
+  REFRESHING = "Refreshing",
+  VEGAN = "Vegan",
+  HANGOVER = "Hangover",
+  MILD = "Mild",
+  BREAKFAST = "Breakfast",
+  GERMAN = "German",
+  FRUITY = "Fruity",
+  EXPENSIVE = "Expensive",
+  SAVORY = "Savory",
+  FRESH = "Fresh",
+  COLORFUL = "Colourful",
+  NATURE = " Nature",
+  PASSION = "Passion",
+  ADULT = "Adult",
+  SHOT = " Shot",
+  BUBBLY = "Bubbly",
+  DARK = "Dark",
+}
+
+export enum INGREDIENTS {
+}
+
+export enum COCKTAIL_TYPE {
+  ALCOHOLIC = "Alcoholic",
+  NON_ALCOHOLIC = "Non alcoholic"
+}
+
+export enum API_URL {
+  BASE = 'https://www.thecocktaildb.com/api/json/v1/1/',
+  SEARCH = 'search.php?s=',
+  FIND_BY_FIRTS_LETTER = 'search.php?f=',
+  INGREDIENT_NAME = 'search.php?i=',
+  DETAIL_BY_ID = 'lookup.php?i=',
+  DETAIL_BY_INGREDIENT_ID = 'lookup.php?i=',
+  RANDOM_COCKTAIL = 'lookup.php?i=',
+  FILTER_BY_INGREDIENT = 'filter.php?i=',
+  FILTER_BY_ALCOHOLIC = 'filter.php?a=',
+  FILTER_BY_CATEGORY = 'filter.php?c=',
+  FILTER_BY_GLASS = 'filter.php?g=',
+  LIST_CATEGORY = 'list.php?c=list',
+  LIST_GLASSES = 'list.php?g=list',
+  LIST_INGREDIENTS = 'list.php?i=list',
+  LIST_ALCOHOLIC = 'list.php?a=list',
+}

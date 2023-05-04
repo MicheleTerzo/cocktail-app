@@ -1,5 +1,4 @@
-import {Component, inject} from '@angular/core';
-import {CocktailDataService} from './services/cocktail-data.service';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,4 @@ import {CocktailDataService} from './services/cocktail-data.service';
 })
 export class AppComponent {
   title = 'cocktail';
-  cocktailService = inject(CocktailDataService)
-
-  async click(){
-    await this.cocktailService.getCocktail()
-  }
 }
