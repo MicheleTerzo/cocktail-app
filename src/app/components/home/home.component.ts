@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {CocktailDataService} from '../../services/cocktail-data.service';
 
 @Component({
@@ -6,16 +6,16 @@ import {CocktailDataService} from '../../services/cocktail-data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   cocktailService = inject(CocktailDataService);
   letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z'];
-  dataDaParsare!: Date;
+  counter: number = 0;
 
-  async click() {
+  constructor() {
   }
 
   async getTypes(): Promise<void> {
-    const property: string = 'strGlass';
+    const property: string = 'strCategory';
     const res = await this.cocktailService.getTemp();
     let data = res
       .filter((drink: any) => drink[property] !== null)
@@ -34,9 +34,5 @@ export class HomeComponent implements OnInit {
       });
     });
     return [...new Set(mainStrArr)];
-  }
-
-  ngOnInit(): void {
-    this.dataDaParsare = new Date();
   }
 }
