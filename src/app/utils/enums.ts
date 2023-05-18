@@ -64,7 +64,27 @@ export enum COCKTAIL_TAGS {
   DARK = "Dark",
 }
 
-export enum INGREDIENTS {
+export enum COCKTAIL_INGREDIENTS {
+  LIGHT_RUM = "Light rum",
+  APPLEJACK = "Applejack",
+  GIN = "Gin",
+  DARK_RUM = "Dark rum",
+  SWEET_VERMOUTH = "Sweet Vermouth",
+  STRAWBERRY_SCHNAPPS = "Strawberry schnapps",
+  SCOTCH = "Scotch",
+  APRICOT_BRANDY = "Apricot brandy",
+  TRIPLE_SEC = "Triple sec",
+  SOUTHERN_COMFORT = "Southern Comfort",
+  ORANGE_BITTERS = "Orange bitters",
+  BRANDY = "Brandy",
+  LEMON_VODKA = "Lemon vodka",
+  BLENDED_WHISKEY = "Blended whiskey",
+  DRY_VERMOUTH = "Dry Vermouth",
+  AMARETTO = "Amaretto",
+  TEA = "Tea",
+  CHAMPAGNE = "Champagne",
+  COFFEE_LIQUEUR = "Coffee liqueur",
+  BOURBON = "Bourbon"
 }
 
 export enum COCKTAIL_TYPE {

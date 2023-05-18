@@ -5,6 +5,8 @@ import {API_URL} from '../utils/enums';
 import {CocktailModel} from '../models/cocktail.model';
 import {plainToInstance} from 'class-transformer';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,12 +23,7 @@ export class CocktailDataService {
   async getCocktailByFirstLetter(letter: string): Promise<any> {
     const url = `${API_URL.BASE}${API_URL.FIND_BY_FIRTS_LETTER}${letter}`;
     const get$ = this.http.get(url);
-    return await firstValueFrom(get$);
-  }
-
-  async getTemp(): Promise<any> {
-    const url = 'assets/db/drinks.json';
-    const get$ = this.http.get(url);
-    return await firstValueFrom(get$);
+    const res = await firstValueFrom(get$);
+    return plainToInstance(CocktailModel, res);
   }
 }
